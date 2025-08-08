@@ -1,0 +1,62 @@
+
+section div{
+    align-items: center;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.quote-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#new-quote {
+    background-color: #007BFF;
+    color: white;
+}
+
+#copy-quote {
+    background-color: #28a745;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.copied {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+}

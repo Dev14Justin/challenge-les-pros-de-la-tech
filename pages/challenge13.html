@@ -1,0 +1,31 @@
+<section style="text-align: center;">
+    <h1 style="font-size: 2rem;">Challenge 13 – Formulaire avec validation en direct</h1>
+    <section class="form-section">
+        <link rel="stylesheet" href="../pages/assets/challenge13/css/style13.css" />
+        
+        <h2>Inscription</h2>
+        <form id="signup-form" novalidate>
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required />
+                <small class="error-msg" id="name-error"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <small class="error-msg" id="email-error"></small>
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required minlength="6"/>
+                <small class="error-msg" id="password-error"></small>
+            </div>
+    
+            <button type="submit" id="submit-btn">S’inscrire</button>
+            <p id="form-message" class="form-message"></p>
+        </form>
+        <script src="../pages/assets/challenge13/js/script13.js"></script>
+    </section>
+</section>

@@ -1,0 +1,22 @@
+/* Arrière-plan de la page */
+body {
+  background-color: #f5f7fa;
+}
+
+/* Style du titre */
+h1 {
+  color: #0056d2; /* Bleu */
+}
+
+/* Style du paragraphe */
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Bonus : mot en surbrillance */
+.highlight {
+  color: #ff9800; /* Orange */
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+
+section {
+    padding: 20px;
+    max-width: 500px; 
+    margin: auto; 
+    text-align: center
+}
+
+#answers button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  width: 80%;
+  cursor: pointer;
+}
+
+#answers button.selected {
+  background-color: #007BFF;
+  color: white;
+}
+
+#next-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}

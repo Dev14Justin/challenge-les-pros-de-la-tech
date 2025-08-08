@@ -1,0 +1,74 @@
+/* Palette de couleurs */
+:root {
+  --primary: #0056d2;
+  --secondary: #ff9800;
+  --background: #f5f7fa;
+  --text: #333;
+}
+
+/* Arrière-plan global */
+/* body {
+  background-color: var(--background);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Titre principal */
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3rem;
+}
+
+/* Paragraphes */
+p {
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 0 15px;
+}
+
+/* Listes */
+ul {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 15px;
+  list-style: disc inside;
+}
+
+li {
+  margin-bottom: 5px;
+}
+h2 {
+  color: var(--primary);
+  margin: 20px auto;
+  padding: 0 200px;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+/* Liens */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+footer p {
+  color: var(--background);
+}

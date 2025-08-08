@@ -1,0 +1,14 @@
+/* Style de la boîte */
+.box {
+  background-color: #e3f2fd; /* Bleu clair */
+  border: 2px solid #0056d2; /* Bordure bleue */
+  padding: 20px; /* Espace intérieur */
+  margin: 20px 0; /* Espace extérieur haut/bas */
+  border-radius: 8px; /* Coins arrondis */
+  transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+/* Bonus : changement de couleur au survol */
+.box:hover {
+  background-color: #bbdefb; /* Bleu un peu plus foncé */
+}

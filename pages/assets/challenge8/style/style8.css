@@ -1,0 +1,37 @@
+
+/* Conteneur flex */
+.container {
+  display: flex; /* Aligne les boîtes en ligne */
+  gap: 10px; /* Espace entre les boîtes */
+}
+
+/* Boîtes */
+.box {
+  flex: 1; /* Chaque boîte prend la même largeur */
+  height: 150px;
+  display: flex; /* Pour centrer le texte */
+  align-items: center; /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Couleurs différentes */
+.box1 {
+  background-color: #ff5722; /* Orange */
+}
+.box2 {
+  background-color: #4caf50; /* Vert */
+}
+.box3 {
+  background-color: #2196f3; /* Bleu */
+}
+
+/* Bonus : Responsive sur mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Passe en colonne */
+  }
+}
