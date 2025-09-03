@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-blue-50">
+    <section class="bg-blue-50 py-20">
+      <h1 class="text-6xl font-bold mb-14 text-center">Challenge 16</h1>
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10"
+      >
+        <!-- Texte Hero -->
+        <div class="md:w-1/2 text-center md:text-left">
+          <h1
+            class="text-5xl font-extrabold text-gray-800 leading-tight tracking-wide"
+          >
+            Je découvre la puissance de
+            <span class="text-blue-600">Tailwind css</span>
+          </h1>
+          <p class="mt-6 text-lg text-gray-600">
+            J’explore <strong>Tailwind css</strong> pour construire des UI
+            propres, modulables et faciles à maintenir dans mes projets.
+          </p>
+
+          <!-- CTA -->
+          <div class="mt-8">
+            <a
+              href="#inscription"
+              class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition transform duration-300"
+            >
+              🚀 Je grandis
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Hero -->
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="src/img/ima1.jpg"
+            alt="Illustration IA"
+            class="w-3/5 rounded-4xl shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-gray-900-solid py-20 mt-20">
+      <div class="max-w-4xl mx-auto text-center relative overflow-hidden">
+        <h1 class="text-6xl font-bold mb-4">Challenge 17</h1>
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Témoignages</h2>
+
+        <!-- Conteneur slider -->
+        <div id="slider" class="flex transition-transform duration-500">
+          <!-- Carte témoignage -->
+          <div class="min-w-full bg-white rounded-2xl shadow-md p-6">
+            <img
+              src="src/img/ima1.jpg"
+              alt="photo"
+              class="w-20 h-20 rounded-full mx-auto mb-4 shadow-lg"
+            />
+            <h3 class="text-lg font-semibold text-gray-800">Jean Dupont</h3>
+            <p class="text-sm text-gray-500">Étudiant en Informatique</p>
+            <p class="mt-4 text-gray-600 italic">
+              "Une expérience incroyable ! J’ai appris à utiliser l’IA de
+              manière pratique et ludique."
+            </p>
+          </div>
+
+          <!-- Carte témoignage -->
+          <div class="min-w-full bg-white rounded-2xl shadow-md p-6">
+            <img
+              src="src/img/ima1.jpg"
+              alt="photo"
+              class="w-20 h-20 rounded-full mx-auto mb-4 shadow-lg"
+            />
+            <h3 class="text-lg font-semibold text-gray-800">Sophie Martin</h3>
+            <p class="text-sm text-gray-500">Designer UX/UI</p>
+            <p class="mt-4 text-gray-600 italic">
+              "Le programme m’a aidée à mieux comprendre l’impact de l’IA dans
+              le design."
+            </p>
+          </div>
+
+          <!-- Carte témoignage -->
+          <div class="min-w-full bg-white rounded-2xl shadow-md p-6">
+            <img
+              src="src/img/ima1.jpg"
+              alt="photo"
+              class="w-20 h-20 rounded-full mx-auto mb-4 shadow-lg"
+            />
+            <h3 class="text-lg font-semibold text-gray-800">Ali Konaté</h3>
+            <p class="text-sm text-gray-500">Développeur Web</p>
+            <p class="mt-4 text-gray-600 italic">
+              "Des formateurs passionnés et des projets concrets. Je recommande
+              à 100% !"
+            </p>
+          </div>
+        </div>
+
+        <!-- Boutons -->
+        <div class="flex justify-center gap-4 mt-6">
+          <button
+            id="prev"
+            class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 duration-300"
+          >
+            ←
+          </button>
+          <button
+            id="next"
+            class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 duration-300"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-gray-900-solid py-20 mt-20">
+      <h1 class="text-6xl font-bold mb-8 text-center">Challenge 18</h1>
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+          FAQ – TailwindCSS
+        </h2>
+
+        <!-- Question 1 -->
+        <div
+          class="border-b border-gray-200 py-4 bg-white rounded-lg mb-4 shadow-sm px-4"
+        >
+          <div
+            onclick="toggleFAQ(1)"
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium text-gray-700">
+              💡 À quoi sert la classe <code>flex</code> en Tailwind ?
+            </h3>
+            <span id="icon-1" class="text-xl">+</span>
+          </div>
+          <div
+            id="answer-1"
+            class="max-h-0 overflow-hidden transition-all duration-300 text-sm text-neutral-600"
+          >
+            <p class="mt-2">
+              La classe <code>flex</code> permet d’activer le **Flexbox
+              layout**. Exemple :
+              <code>flex justify-center items-center</code> centre son contenu
+              horizontalement et verticalement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div
+          class="border-b border-gray-200 py-4 bg-white rounded-lg mb-4 shadow-sm px-4"
+        >
+          <div
+            onclick="toggleFAQ(2)"
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium text-gray-700">
+              🎨 Quelle est la différence entre <code>px-4</code> et
+              <code>py-4</code> ?
+            </h3>
+            <span id="icon-2" class="text-xl">+</span>
+          </div>
+          <div
+            id="answer-2"
+            class="max-h-0 overflow-hidden transition-all duration-300 text-sm text-neutral-600"
+          >
+            <p class="mt-2">
+              - <code>px-4</code> applique un padding horizontal
+              (gauche/droite). - <code>py-4</code> applique un padding vertical
+              (haut/bas). 👉 Combine-les pour un padding homogène :
+              <code>p-4</code>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div
+          class="border-b border-gray-200 py-4 bg-white rounded-lg mb-4 shadow-sm px-4"
+        >
+          <div
+            onclick="toggleFAQ(3)"
+            class="flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium text-gray-700">
+              🌗 Comment activer le mode dark avec TailwindCSS ?
+            </h3>
+            <span id="icon-3" class="text-xl">+</span>
+          </div>
+          <div
+            id="answer-3"
+            class="max-h-0 overflow-hidden transition-all duration-300 text-sm text-neutral-600"
+          >
+            <p class="mt-2">
+              Ajoute <code>darkMode: 'class'</code> dans
+              <code>tailwind.config.js</code>. Puis, tu peux utiliser des
+              classes comme <code>dark:bg-gray-900</code> ou
+              <code>dark:text-white</code>. Ensuite, ajoute
+              <code>class="dark"</code> sur ton <code>&lt;html&gt;</code> ou via
+              JS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 border-t border-gray-900-solid py-20 mt-20">
+      <h1 class="text-6xl font-bold mb-8 text-center">Challenge 19</h1>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+          Galerie TailwindCSS
+        </h2>
+
+        <!-- Menu de filtres -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <button
+            onclick="filterGallery('all')"
+            class="filter-btn bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
+          >
+            Tout
+          </button>
+          <button
+            onclick="filterGallery('layout')"
+            class="filter-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 transition"
+          >
+            Layout
+          </button>
+          <button
+            onclick="filterGallery('colors')"
+            class="filter-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 transition"
+          >
+            Couleurs
+          </button>
+          <button
+            onclick="filterGallery('effects')"
+            class="filter-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 transition"
+          >
+            Effets
+          </button>
+        </div>
+
+        <!-- Galerie -->
+        <div id="gallery" class="grid md:grid-cols-3 gap-4">
+          <!-- Image 1 -->
+          <div data-category="layout" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x400?text=grid+%26+flex"
+              alt="Exemple Tailwind grid & flex"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+
+          <!-- Image 2 -->
+          <div data-category="colors" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x600/3B82F6/FFF?text=bg-blue-600"
+              alt="Exemple Tailwind couleurs"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+
+          <!-- Image 3 -->
+          <div data-category="effects" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x500/10B981/FFF?text=hover:scale-105"
+              alt="Exemple Tailwind effets"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+
+          <!-- Image 4 -->
+          <div data-category="layout" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x700/F59E0B/FFF?text=flex+justify-center"
+              alt="Exemple Tailwind layout"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+
+          <!-- Image 5 -->
+          <div data-category="colors" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x450/EF4444/FFF?text=text-red-500"
+              alt="Exemple Tailwind couleurs"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+
+          <!-- Image 6 -->
+          <div data-category="effects" class="overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/600x400/8B5CF6/FFF?text=shadow-xl"
+              alt="Exemple Tailwind effets"
+              class="object-cover w-full h-full hover:scale-105 hover:shadow-xl transition cursor-pointer"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modale -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"
+    >
+      <div class="relative max-w-3xl mx-auto">
+        <img
+          id="modal-img"
+          src=""
+          alt="Zoom Tailwind"
+          class="rounded-md shadow-2xl"
+        />
+        <button
+          onclick="closeModal()"
+          class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 shadow hover:bg-gray-200"
+        >
+          ✖
+        </button>
+      </div>
+    </div>
+
+    <section class="bg-gray-50 py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Nos Tarifs</h2>
+        <p class="text-gray-600 mb-12">
+          Choisis ton plan et booste tes projets avec TailwindCSS ✨
+        </p>
+
+        <!-- Container -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Basique -->
+          <div
+            class="bg-white border rounded-lg shadow hover:shadow-xl transition duration-300 p-6 flex flex-col"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Basique</h3>
+            <p class="text-gray-600 mb-6">
+              Idéal pour découvrir TailwindCSS et créer tes premiers designs.
+            </p>
+            <div class="text-4xl font-bold mb-6">
+              9€<span class="text-lg font-normal">/mois</span>
+            </div>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li>✔ Accès aux classes utilitaires</li>
+              <li>✔ Documentation complète</li>
+              <li>❌ Support prioritaire</li>
+            </ul>
+            <button
+              class="mt-auto bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded-lg transition hover:scale-105"
+            >
+              Choisir
+            </button>
+          </div>
+
+          <!-- Pro (mise en avant) -->
+          <div
+            class="bg-white border rounded-lg shadow-lg ring-2 ring-blue-600 transform scale-105 hover:scale-110 transition duration-300 p-6 flex flex-col"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-blue-600">Pro ⭐</h3>
+            <p class="text-gray-600 mb-6">
+              Parfait pour les développeurs qui veulent aller plus loin avec
+              TailwindCSS.
+            </p>
+            <div class="text-4xl font-bold mb-6">
+              29€<span class="text-lg font-normal">/mois</span>
+            </div>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li>✔ Accès illimité aux classes</li>
+              <li>✔ Exemples avancés</li>
+              <li>✔ Support prioritaire</li>
+            </ul>
+            <button
+              class="mt-auto bg-blue-600 text-white hover:bg-blue-700 px-6 py-2 rounded-lg transition hover:scale-105"
+            >
+              Choisir
+            </button>
+          </div>
+
+          <!-- Premium -->
+          <div
+            class="bg-white border rounded-lg shadow hover:shadow-xl transition duration-300 p-6 flex flex-col"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Premium</h3>
+            <p class="text-gray-600 mb-6">
+              Accès complet + bonus exclusifs pour maîtriser TailwindCSS à 100%.
+            </p>
+            <div class="text-4xl font-bold mb-6">
+              59€<span class="text-lg font-normal">/mois</span>
+            </div>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li>✔ Tout dans le plan Pro</li>
+              <li>✔ Templates premium</li>
+              <li>✔ Coaching personnalisé</li>
+            </ul>
+            <button
+              class="mt-auto bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded-lg transition hover:scale-105"
+            >
+              Choisir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>

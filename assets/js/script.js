@@ -1,6 +1,13 @@
+
+
 function toggleSidebar() {
+  // Si écran mobile, inutile
+  if (window.innerWidth <= 768) return;
   document.getElementById("sidebar").classList.toggle("collapsed");
 }
+
+
+
 
 
 function chargerPageDansMain(url) {
@@ -27,7 +34,7 @@ function chargerPageDansMain(url) {
       main.innerHTML = tempDiv.innerHTML;
 
       // Appelle l'initialisation des éventuels scripts/événements spécifiques du contenu injecté
-      //  initFormValidation();
+      //initFormValidation();
 
       activerLiensInternes(); // Réactive les liens internes
     })

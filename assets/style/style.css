@@ -48,7 +48,6 @@ aside {
   width: 200px;
   background: linear-gradient(180deg, #0056d2, #0077ff);
   color: white;
-  padding: 0px;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   position: sticky;
@@ -92,20 +91,22 @@ aside::-webkit-scrollbar-thumb:hover {
   transition: all 0.3s ease;
   font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(6px); /* Effet légèrement transparent */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  /* Effet légèrement transparent */
   z-index: 10;
 }
 
 .toggle-btn:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-.toggle-btn span{
+
+.toggle-btn span {
   transition: opacity 0.3s ease;
 }
 
 /* Icônes simulées */
-.icon {
+/* .icon {
   width: 20px;
   height: 20px;
   background: white;
@@ -115,7 +116,7 @@ aside::-webkit-scrollbar-thumb:hover {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-}
+} */
 
 
 /* Mode réduit */
@@ -124,7 +125,7 @@ aside.collapsed {
   transition: width 0.3s ease;
 }
 
-aside.collapsed .toggle-btn span{
+aside.collapsed .toggle-btn span {
   display: none;
   opacity: 0;
   width: 0;
@@ -139,6 +140,7 @@ aside.collapsed ul li a span {
   display: none;
   /* Cache le texte */
 }
+
 aside.collapsed ul li a {
   justify-content: center;
   /* Centre le contenu */
@@ -155,6 +157,7 @@ aside.collapsed ul li a {
   padding: 8px;
   /* Ajuste le padding */
 }
+
 aside.collapsed ul li a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
@@ -205,13 +208,15 @@ aside ul li a:hover {
 aside ul::-webkit-scrollbar {
   width: 6px;
 }
+
 aside ul::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
 }
 
 #menu-list a.active {
-  background-color: #ffffff; /* Bleu */
+  background-color: #ffffff;
+  /* Bleu */
   color: #0056d2;
   border-radius: 5px;
 }
@@ -219,6 +224,110 @@ aside ul::-webkit-scrollbar-thumb {
 #menu-list a.active .icon {
   background-color: #0056d2;
 }
+
 aside.collapsed #menu-list a.active .icon {
   color: #ffffff;
+}
+
+
+
+/* Menu */
+#menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#menu-list li {
+  margin: 10px;
+}
+
+#menu-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+#menu-list a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#menu-list a.active {
+  background: #fff;
+  color: #0056d2;
+}
+
+#menu-list a.active .icon {
+  background: #0056d2;
+  color: #fff;
+}
+
+/* Icônes */
+.icon {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; 
+}
+
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* Sidebar devient bottom nav */
+  aside {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .toggle-btn {
+    display: none; /* pas besoin sur mobile */
+  }
+
+  #menu-list {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #menu-list li {
+    margin: 0;
+  }
+
+  #menu-list a {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.7rem;
+  }
+
+  #menu-list a span {
+    display: none; /* cacher les textes, icônes seulement */
+  }
+
+  main {
+    padding-bottom: 80px; /* éviter que le contenu soit caché par la nav */
+  }
 }
